@@ -3,7 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ရွှေတံခါးဆေး အလှူခံရနိုင်သော နေရာများ</title>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
 *{
@@ -15,32 +18,57 @@
 
 body{
     background:#f4f6f9;
+    min-height:100vh;
 }
 
 header{
-    background:linear-gradient(135deg,#d4af37,#b8860b);
+    background:linear-gradient(135deg,#d4af37,#b8860b,#d4af37);
+    background-size:200% 200%;
+    animation:gradient 6s ease infinite;
     color:white;
     text-align:center;
-    padding:30px 20px;
+    padding:40px 20px;
+}
+
+@keyframes gradient{
+    0%{background-position:0% 50%;}
+    50%{background-position:100% 50%;}
+    100%{background-position:0% 50%;}
 }
 
 header h1{
-    font-size:32px;
+    font-size:34px;
     margin-bottom:10px;
+}
+
+header p{
+    font-size:17px;
 }
 
 .container{
     width:90%;
-    max-width:800px;
+    max-width:850px;
     margin:30px auto;
 }
 
 .card{
-    background:white;
+    background:#fff;
+    border-radius:20px;
     padding:30px;
-    border-radius:15px;
-    box-shadow:0 4px 15px rgba(0,0,0,0.15);
     text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,.12);
+    animation:fadeIn 1.2s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
 }
 
 .card-image{
@@ -49,50 +77,84 @@ header h1{
     object-fit:cover;
     border-radius:50%;
     border:6px solid #d4af37;
-    display:block;
-    margin:0 auto 20px;
-    box-shadow:0 0 20px rgba(212,175,55,0.5);
+    box-shadow:0 0 25px rgba(212,175,55,.6);
+    margin-bottom:20px;
 }
 
 .card h2{
     color:#b8860b;
     margin-bottom:15px;
-    font-size:28px;
+    font-size:30px;
 }
 
 .card p{
-    font-size:18px;
     color:#444;
+    font-size:18px;
     line-height:1.8;
+}
+
+.info-box{
+    background:#fff8dc;
+    border-left:6px solid #d4af37;
+    padding:15px;
+    margin:20px 0;
+    border-radius:10px;
+    color:#444;
+    text-align:left;
 }
 
 .btn{
     display:inline-block;
-    margin-top:20px;
-    padding:14px 28px;
     background:#0088cc;
     color:white;
     text-decoration:none;
-    border-radius:8px;
+    padding:14px 25px;
+    border-radius:10px;
     font-size:18px;
-    font-weight:bold;
-    transition:0.3s;
+    margin-top:15px;
+    transition:.3s;
 }
 
 .btn:hover{
-    background:#006699;
     transform:scale(1.05);
+    background:#006699;
+}
+
+.social-buttons{
+    margin-top:25px;
+}
+
+.social-buttons a{
+    display:inline-flex;
+    justify-content:center;
+    align-items:center;
+    width:55px;
+    height:55px;
+    margin:5px;
+    border-radius:50%;
+    background:white;
+    color:#333;
+    text-decoration:none;
+    font-size:24px;
+    box-shadow:0 3px 10px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.social-buttons a:hover{
+    transform:translateY(-5px);
 }
 
 footer{
-    text-align:center;
-    padding:20px;
+    margin-top:40px;
     background:#222;
     color:white;
-    margin-top:40px;
+    text-align:center;
+    padding:25px;
+    line-height:1.8;
 }
 </style>
 </head>
+
 <body>
 
 <header>
@@ -104,31 +166,63 @@ footer{
 
     <div class="card">
 
-        <img src="monk.jpg"
-             alt="ရွှေတံခါးဆေး"
-             class="card-image">
+        <img src="monk.jpg" alt="ရွှေတံခါးဆေး" class="card-image">
 
         <h2>ရွှေတံခါးဆေး</h2>
 
         <p>
             ရွှေတံခါးဆေး အလှူခံရရှိနိုင်သော
-            နေရာများကို ကြည့်ရှုရန်
-            အောက်ပါ Telegram Button ကို နှိပ်ပါ။
+            နေရာများကို အောက်ပါ Telegram Channel မှ
+            ဝင်ရောက်ကြည့်ရှုနိုင်ပါသည်။
         </p>
+
+        <div class="info-box">
+            🙏 ဆေးဝါးအလှူဒါန ပြုလုပ်လိုသူများအတွက်
+            အလှူခံရရှိနိုင်သော နေရာများကို
+            စုစည်းတင်ပြပေးထားပါသည်။
+        </div>
 
         <a class="btn"
            href="https://t.me/shwedagardonation"
            target="_blank">
-           Telegram Channel ဝင်ရန်
+            <i class="fab fa-telegram"></i>
+            Telegram Channel ဝင်ရန်
         </a>
+
+        <div class="social-buttons">
+
+            <a href="https://t.me/shwedagardonation" target="_blank" title="Telegram">
+                <i class="fab fa-telegram"></i>
+            </a>
+
+            <a href="tel:+959679560939" title="Phone 1">
+                <i class="fas fa-phone"></i>
+            </a>
+
+            <a href="tel:+959673481563" title="Phone 2">
+                <i class="fas fa-phone"></i>
+            </a>
+
+            <a href="https://www.facebook.com/share/1c3pmuGH9n/" target="_blank" title="Facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+
+            <a href="https://www.tiktok.com/@hsu.hsu.sein?_r=1&_t=ZS-97DpZo2s3yD" target="_blank" title="TikTok">
+                <i class="fab fa-tiktok"></i>
+            </a>
+
+        </div>
 
     </div>
 
 </div>
 
 <footer>
-    © 2026 ရွှေတံခါးဆေး Donation Directory By Win Thu
+    © 2026 Shwe Dagar Donation Directory
+    <br>
+    Developed By Win Thu
 </footer>
+
 
 </body>
 </html>
