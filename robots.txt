@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://kabaayethar2001-oss.github.io/Shwedagar/sitemap.xml
