@@ -232,5 +232,16 @@ footer{
 </footer>
 
 
+
+<button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" style="position:fixed;bottom:20px;right:20px;padding:12px 15px;border:none;border-radius:50%;background:#d4af37;color:#fff;cursor:pointer;">↑</button>
+<a href="https://t.me/shwedagardonation" target="_blank" rel="noopener noreferrer" style="position:fixed;bottom:80px;right:20px;background:#229ED9;color:#fff;width:55px;height:55px;border-radius:50%;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:28px;">✈</a>
+<script>
+document.querySelectorAll('a[target="_blank"]').forEach(a=>a.rel='noopener noreferrer');
+document.addEventListener('DOMContentLoaded',()=>{
+ const y=new Date().getFullYear();
+ const f=document.querySelector('footer');
+ f.innerHTML=f.innerHTML.replace('2026',y);
+});
+</script>
 </body>
 </html>
